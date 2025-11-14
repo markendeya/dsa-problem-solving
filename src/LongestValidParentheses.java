@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class LongestValidParentheses {
     public int longestValidParentheses(String s) {
         Stack<Integer> st = new Stack<Integer>();
