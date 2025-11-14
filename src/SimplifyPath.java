@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class Simplypath {
+public class SimplifyPath {
 
     public String simplifyPath(String path) {
         if(path== null || path.isEmpty()){
@@ -20,7 +20,7 @@ public class Simplypath {
     }
 
     public static void main(String[] args) {
-        Simplypath sol = new Simplypath();
+        SimplifyPath sol = new SimplifyPath();
         // Test cases
         System.out.println(sol.simplifyPath("/a//b////c/d//././/..")); // Expected output: "/a/b/c"
         System.out.println(sol.simplifyPath("/../")); // Expected output: "/"
