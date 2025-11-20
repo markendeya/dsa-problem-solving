@@ -10,7 +10,6 @@ public class BuildingsWithanOceanView {
                 st.pop();
             }
             st.push(i);
-
         }
         int[] ans = new int[st.size()];
         for (int i = ans.length - 1; i >= 0; i--) {
