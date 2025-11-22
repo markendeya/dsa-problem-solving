@@ -1,0 +1,22 @@
+import java.util.HashMap;
+
+public class LongestSubstrWithoutRepeatingChars {
+    public int lengthOfLongestSubstring(String s) {
+        int left = 0;
+        int max = 0;
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        for (int right = 0; right < s.length(); right++) {
+            char c = s.charAt(right);
+
+            if (map.containsKey(c)) {
+                left = Math.max(left, map.get(c) + 1);
+            }
+
+            map.put(c, right);
+            max = Math.max(max, right - left + 1);
+        }
+
+        return max;
+    }
+}
