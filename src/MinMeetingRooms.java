@@ -10,9 +10,18 @@ public class MinMeetingRooms {
             startTime[i] = intervals[i][0];
             endTime[i] = intervals[i][1];
         }
-        int roomsRequired=0,minRoomsRequired = 0;
         Arrays.sort(startTime);
         Arrays.sort(endTime);
+ /*       int roomsRequired=0, endPtr=0;
+        for (int i = 0; i < n; i++) {
+            if (startTime[i] < endTime[endPtr]) {
+                roomsRequired++;       // need new room
+            } else {
+                endPtr++;      // free one room
+            }
+        }
+        return roomsRequired; */
+        int roomsRequired=0,minRoomsRequired = 0;
         int i = 0,j = 0;
         while (i < m && j < m) {
             if (startTime[i] < endTime[j]) {

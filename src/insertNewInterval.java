@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class inserInterval {
+class insertNewInterval {
         public int[][] insert(int[][] intervals, int[] newInterval) {
             List<int[]> merge = new ArrayList<>();
             int i=0;
