@@ -45,6 +45,18 @@ public class NumberOfIslands {
             neighbors.add(new int[] { row, col - 1 }); // left cell
         }
     }
+    int []dx ={1,-1,0,0};
+    int [] dy ={0,0,-1,1};
+    private void dfs(int row,int col, char[][] grid,int m,int n,int[]dx,int[]dy){
+
+        if(row<0 || col<0 || row>=m || col>=n || grid[row][col]=='0'){
+            return;
+        }
+        grid[row][col]='0';
+        for(int i=0;i<4;i++){
+            dfs(row+dx[i],col+dy[i],grid,m,n,dx,dy);
+        }
+    }
 
     public static void main(String[] args) {
         NumberOfIslands sol = new NumberOfIslands();

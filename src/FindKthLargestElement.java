@@ -1,0 +1,16 @@
+import java.util.PriorityQueue;
+
+public class FindKthLargestElement {
+    public int findKthLargest(int[] nums, int k) {
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+
+        for (int num : nums) {
+            minHeap.offer(num);
+            if (minHeap.size() > k) {
+                minHeap.poll(); // remove smallest
+            }
+        }
+
+        return minHeap.peek();
+    }
+}
