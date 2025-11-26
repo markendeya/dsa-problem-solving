@@ -1,5 +1,5 @@
 public class BestTimeToBuyAndSellStock {
-
+  // Only 1 Buy + 1 Sell allowed
     public int maxProfit(int[] prices) {
         int minPrice = Integer.MAX_VALUE;
         int maxProfit =0;
