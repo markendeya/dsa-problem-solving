@@ -12,7 +12,7 @@ public class MinAbsDiffBtwEleWithConstr {
         int ans = Integer.MAX_VALUE;
 
         for (int j = x; j < nums.length; j++) {
-            ts.add(nums[j - x]); // element becomes eligible
+            ts.add(nums[j - x]);
 
             Integer floor = ts.floor(nums[j]);
             if (floor != null)
